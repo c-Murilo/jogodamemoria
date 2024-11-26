@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="styleIndex.css">
+</head>
+<body>
+<div class="login">
+    <h1>Login</h1>
+    <form id="loginForm">
+        <input type="text" id="userName" placeholder="Digite seu nome" required />
+        <button type="submit" class="">Enviar</button>
+    </form>
+</div>
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault()
+        const name = document.getElementById('userName').value
+        localStorage.setItem('nome', name)
+        window.location.href = "jogo.html"
+    });
+</script>
+
+</body>
+</html>
